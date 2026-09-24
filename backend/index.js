@@ -1,0 +1,31 @@
+import dotenv from 'dotenv'
+dotenv.config()
+
+import express from 'express'
+import connectDB from './config/db.js'
+import cors from 'cors'
+
+import authRoutes from './routes/authRoutes.js'
+import eventRoutes from './routes/eventRoutes.js'
+import bookingRoutes from './routes/bookingRoutes.js'
+import analyticsRoutes from './routes/analyticsRoutes.js'
+
+let app = express()
+
+app.use(cors({
+    origin: process.env.FRONTEND_URL || '*'
+}))
+app.use(express.json())
+
+app.use('/api/auth', authRoutes)
+app.use('/api/events', eventRoutes)
+app.use('/api/bookings', bookingRoutes)
+app.use('/api/analytics', analyticsRoutes)
+
+app.get('/',(req,res) => res.json({ message: 'PrimePlanners API running' }))
+
+connectDB().then(()=>{
+    app.listen(process.env.PORT,()=>{
+        console.log("Server is running on PORT " + process.env.PORT)
+    })
+})
