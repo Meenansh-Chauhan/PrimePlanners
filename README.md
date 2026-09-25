@@ -72,6 +72,20 @@ PrimePlanners/
 ```
 
 ---
+## 🧠 Key Technical Highlights
+
+- JWT authentication with role-based authorization
+- MongoDB/Mongoose data modeling
+- Dynamic pricing engine based on demand, time, and category
+- Tier-based ticket pricing
+- Booking and cancellation workflow
+- Pricing snapshots for historical analysis
+- Price logging and analytics aggregation
+- Admin analytics and pricing-monitor dashboard
+- Cloudinary-based event image uploads
+- GSAP-powered animations and Lenis smooth scrolling
+
+---
 
 ## 🚀 Getting Started
 
@@ -84,7 +98,7 @@ PrimePlanners/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/PrimePlanners.git
+git clone https://github.com/Meenansh-Chauhan/PrimePlanners.git
 cd PrimePlanners
 ```
 
@@ -169,6 +183,8 @@ The app will be running at `http://localhost:5173`
 | GET    | `/api/analytics/pricing-monitor`  | Live pricing dashboard   | Admin  |
 
 ---
+
+
 
 ## 💰 Dynamic Pricing Model
 
