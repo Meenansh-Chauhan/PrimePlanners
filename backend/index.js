@@ -12,6 +12,7 @@ import analyticsRoutes from './routes/analyticsRoutes.js'
 
 let app = express()
 
+
 app.use(cors({
     origin: process.env.FRONTEND_URL || '*'
 }))
