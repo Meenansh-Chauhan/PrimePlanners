@@ -18,6 +18,7 @@ export const getOverview = async (req, res) => {
     const cancelledBookings = await Booking.countDocuments({ status: 'cancelled' })
     const cancellationRate = totalBookings > 0 ? ((cancelledBookings / (totalBookings + cancelledBookings)) * 100).toFixed(1) : 0
 
+
     res.status(200).json({
       totalUsers,
       totalEvents,
@@ -221,7 +222,6 @@ export const getPricingMonitor = async (req, res) => {
     res.status(500).json({ message: error.message })
   }
 }
-
 // GET /api/analytics/users
 export const getUsers = async (req, res) => {
   try {

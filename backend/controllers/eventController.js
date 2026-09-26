@@ -143,6 +143,7 @@ export const getEventPrice = async (req, res) => {
     const pricing = event.getCurrentPrice()
     res.status(200).json({ pricing })
 
+    
   } catch (error) {
     res.status(500).json({ message: error.message })
   }
